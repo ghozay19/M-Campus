@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 // your code here...
                 btnLogin.setProgress(0);
-                btnLogin.setEnabled(false);
+                btnLogin.setEnabled(true);
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
                 return false;
             }
@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 // your code here...
                 btnLogin.setProgress(0);
-                btnLogin.setEnabled(false);
+                btnLogin.setEnabled(true);
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
                 return false;
             }

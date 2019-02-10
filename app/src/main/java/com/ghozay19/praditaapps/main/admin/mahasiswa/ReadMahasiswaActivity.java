@@ -59,14 +59,21 @@ public class ReadMahasiswaActivity extends AppCompatActivity {
     private void ReadData() {
         final ProgressDialog dialog = ProgressDialog.show(this, "", "Fetching Data....", false);
 
+
         ConfigRetrofit.service.getAllData().enqueue(new Callback<ResponsMahasiswa>() {
             @Override
             public void onResponse(Call<ResponsMahasiswa> call, Response<ResponsMahasiswa> response) {
                 dialog.dismiss();
 
                 mItems = response.body().getResult();
+
+
+
                 Log.d("Read Data","Hasilnya adalah -> " + response.body().getKode());
-                  
+
+
+
+
                 recyclerView.setAdapter(new MahasiswaAdapter(getApplicationContext(),mItems));
                 adapter.notifyDataSetChanged();
 
